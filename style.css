@@ -1,155 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Сайт визитка</title>
-</head>
-
-<body>
-  <header class="header">
-    <div class="container">
-      <nav class="navigation">
-        <a href="" class="logo">S</a>
-        <ul class="navigation-holder">
-          <li class="nav-links">
-            <a href="#">Explore</a>
-          </li>
-          <li class="nav-links">
-            <a href="#">Mentors</a>
-          </li>
-          <li class="nav-links">
-            <a href="#">Blog</a>
-          </li>
-          <li class="nav-links">
-            <a href="#">Community</a>
-          </li>
-        </ul>
-      </nav>
-      <!-- Конец навигации -->
-      <section class="header-title">
-        <span class="header-subtitle-text">featured class</span>
-        <h1 class="header-title-text">
-          The role of
-          User Interface
-          Designer
-        </h1>
-
-        <a href="#" class="join">
-          <img src="/img/icons/arrow.svg" alt="">
-          <span class="join-text">Join <br> The Class</span>
-        </a>
-      </section>
-      <!-- Конец 2ой секции -->
-      <section class="header-info-block">
-
-        <div class="card-info">
-          <img src="/img/girl-avatar.png" alt="" class="card-info-img">
-          <h2 class="info-title">Karen William</h2>
-          <span class="info-subtitle">Senior Designer</span>
-        </div>
-
-        <div class="card-about">
-          <div class="about-text-wrapper">
-            <span class="about-subtitle-text">About</span>
-            <p class="about-desc">
-              quis nostrud exercitation ullamco
-              laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in
-            </p>
-          </div>
-
-          <div class="audio-holder">
-            <div class="audio-block">
-              <img src="/img/man-avatar.png" alt="">
-              <div class="audio-container">
-                <div class="audio-detail">
-                  <div class="control">
-                    <i class="fi-rr-play" id="playPause"></i>
-                  </div>
-                  <div id="wave"></div>
-                </div>
-              </div>
-            </div>
-
-            <div class="audio-author">
-              <div>
-                <h2 class="about-title">Testimonial</h2>
-                <span class="about-subtitle">Tom Hope</span>
-              </div>
-              <div class="time">
-                <span id="current">0:00</span>
-                <span id="duration">0:00</span>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-    </div>
-  </header>
-
-  <main class="main-content">
-    <div class="container">
-      <section class="courses">
-        <h1 class="course-section-title">Popular Courses
-          <br>
-          this week
-        </h1>
-
-        <section class="course-row">
-          <div class="course-card card-big">
-            <div class="img-container img-card-1">
-              <span class="btn-time">15 mins</span>
-              <span class="btn-raiting">
-                4.8
-                <img src="img/icons/star.svg" width="15" height="15" alt="star">
-              </span>
-            </div>
-            <div class="info-container">
-              <h4 class="course-category">PHOTOGRAPHY</h4>
-              <h2 class="course-title">Create an attractive product photography</h2>
-              <p class="course-desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna.
-              </p>
-            </div>
-          </div>
-          <div class="course-card card-small">
-            <div class="img-container img-card-2">
-              <span class="btn-time">15 mins</span>
-              <span class="btn-raiting">
-                4.8
-                <img src="img/icons/star.svg" width="15" height="15" alt="star">
-              </span>
-            </div>
-            <div class="info-container">
-              <h4 class="course-category">DESIGN</h4>
-              <h2 class="course-title">User Interface Design</h2>
-              <p class="course-desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section class="course-row">
-          Второй ряд
-        </section>
-      </section>
-    </div>
-  </main>
-
-  <script src="wavesurfer.js"></script>
-  <script src="media.js"></script>
-</body>
-
-</html>
-
-19:23
 @import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
 
 * {
@@ -187,6 +35,10 @@
   text-decoration: none;
   color: #1A1A1A;
   font-weight: bold;
+}
+
+.mob-btn {
+  display: none;
 }
 
 .navigation-holder {
@@ -298,6 +150,10 @@
   line-height: 1.8;
 }
 
+.audio-holder {
+  width: 540px;
+}
+
 .audio-block {
   background-color: #242424;
   display: flex;
@@ -344,10 +200,6 @@
   display: block;
 }
 
-.audio-holder {
-  width: 540px;
-}
-
 .audio-detail {
   flex: 1;
 }
@@ -361,11 +213,11 @@
 .control i {
   width: 40px;
   height: 40px;
-  background-color: blue;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.25rem;
+  background-color: blue;
   color: white;
   cursor: pointer;
 }
@@ -382,6 +234,8 @@
   top: 10px;
   right: 0;
 }
+
+/* MAIN CONTENT */
 
 .course-section-title {
   font-weight: 600;
@@ -417,13 +271,8 @@
 }
 
 .img-card-1 {
-  background-image: url(img/card-1.png);
+  background-image: url(/img/card-1.png);
 }
-
-.img-card-2 {
-  background-image: url(img/card-2.png);
-}
-
 
 .btn-time {
   background-color: #fff;
@@ -439,7 +288,7 @@
   background-color: #111;
   border-radius: 5px;
   color: #fff;
-  padding: 6px 0;
+  padding: 6px 0px;
   display: inline-flex;
   align-items: center;
   justify-content: space-evenly;
@@ -464,7 +313,214 @@
 .course-desc {
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.7;
   color: #767676;
+  line-height: 1.7;
   letter-spacing: 0.5px;
+}
+
+.img-card-2 {
+  background-image: url(/img/card-2.png);
+}
+
+.img-card-3 {
+  background-image: url(/img/card-3.png);
+}
+
+.img-card-4 {
+  background-image: url(/img/card-4.png);
+}
+
+/* FOOTER */
+
+.footer {
+  background-color: #F5F6F8;
+  padding: 60px 0;
+}
+
+.course-info-title {
+  font-weight: 600;
+  font-size: 70px;
+  color: #1A1A1A;
+  padding-bottom: 40px;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #939495;
+  padding: 30px 0;
+}
+
+.left-block {
+  display: flex;
+  align-items: center;
+}
+
+.course-number {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  color: #A2A2A4;
+}
+
+.course-block {
+  margin-left: 60px;
+  line-height: 1.5;
+}
+
+.course-name {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  letter-spacing: 0.8px;
+  color: #000000;
+}
+
+.course-count {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  color: #9A9A9B;
+}
+
+.footer-row:last-child {
+  border-bottom: none;
+}
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1120px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 992px) {
+
+  /* Для аудиоблока */
+  .header-info-block {
+    flex-direction: column;
+  }
+
+  .card-about {
+    align-self: flex-end;
+    margin-top: 60px;
+  }
+
+  .audio-container {
+    order: -1;
+  }
+
+  /* Для основного раздела */
+  .course-row {
+    flex-wrap: wrap;
+    margin-bottom: 0;
+  }
+
+  .course-card {
+    display: flex;
+    margin-bottom: 60px;
+  }
+
+  .card-big,
+  .card-small {
+    width: 100%;
+  }
+
+  .img-container,
+  .info-container {
+    width: 50%;
+  }
+
+  .img-card-1,
+  .img-card-3 {
+    margin-right: 40px;
+  }
+
+  .img-card-2,
+  .img-card-4 {
+    order: 2;
+    margin-left: 40px;
+  }
+}
+
+@media (max-width: 756px) {
+
+  /* Для основного раздела */
+  .course-card {
+    flex-direction: column;
+  }
+
+  .img-card-1,
+  .img-card-3,
+  .img-card-2,
+  .img-card-4 {
+    margin: 0;
+  }
+
+  .img-container,
+  .info-container {
+    width: 100%;
+  }
+
+  .img-card-2,
+  .img-card-4 {
+    order: -1;
+  }
+}
+
+@media (max-width: 578px) {
+
+  /* Для меню */
+  .navigation-holder {
+    display: none;
+  }
+
+  .mob-btn {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 60px;
+    color: #fff;
+  }
+
+  /* Заголовок в шапке */
+  .header-title-text {
+    font-size: 60px;
+  }
+
+  /* Кнопка Join */
+  .join {
+    display: none;
+  }
+
+  /* Изображение девушки */
+  .card-info-img {
+    max-width: 100%;
+  }
+
+  /* Для аудиоблока */
+  .audio-holder,
+  .card-about {
+    width: 100%;
+  }
+
+  .audio-block img {
+    display: none;
+  }
+
+  .audio-container {
+    padding: 0 42px 0 0;
+  }
+
+  .control i {
+    height: 48px;
+  }
+
+  /* Для футера */
+  .course-name {
+    font-size: 24px;
+  }
 }
